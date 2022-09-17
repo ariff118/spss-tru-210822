@@ -1,0 +1,127 @@
+---
+format: 
+  revealjs:
+    slide-number: true
+    width: 1600
+    height: 900
+    logo: "https://www.rstudio.com/wp-content/uploads/2018/10/RStudio-Logo-Flat.png"
+    footer: "[github.com.ariff118](https://github.com/ariff118)"
+    css: ["theme/theme.css"]
+    theme: simple
+editor: source
+#filters:
+#  - code-filename
+---
+  
+##  {#TitleSlide data-menu-title="TitleSlide" background-color="#303436" background-image="images/hamlet-quarto.jpeg" background-position="left" background-size="contain"}
+  
+```{r setup, include=FALSE}
+library(fontawesome)
+library(tidyverse)
+library(quarto)
+library(gt)
+library(gtExtras)
+library(gtsummary)
+```
+
+
+::: {style="position: absolute; left: 480px; top: 200px; height: 525px; width: 1500px; background-color: #69b1e9; padding: 20px; padding-left: 50px; box-shadow: 15px 15px 0px 0px #a9bcd2; border-radius: 5px;"}
+[Intro to SPSS]{style="font-size: 120px; font-weight: bold; line-height: 1em; margin: 0px"}
+<br>
+[in 2 Hours]{style="font-size: 120px; font-weight: bold; line-height: 1em; margin: 0px"}
+
+<br>
+  
+[Kamarul Ariffin, UiTM Kedah]{style="font-size: 60px; font-weight: bold;"}
+
+<a href="https://github.com/ariff118">`r fontawesome::fa("link", "white", height="45px")`</a>&nbsp;[github.com/ariff118](https://github.com/ariff118){style="font-size: 50px; color: white;"}
+
+[2022-09-21]{style="font-size: 50px;font-weight: bold;"}
+:::
+  
+::: footer
+[You are sneaky!]{style="color: transparent;"}
+:::
+
+#  {background-color="#447099"}
+
+[Hello SPSS]{.r-fit-text}
+
+## We assume
+
+`r fa("r-project")` You know R
+
+`r fa("markdown")` You know a little bit of Markdown
+
+<img src="https://raw.githubusercontent.com/quarto-dev/quarto-web/main/favicon.png" style="display: inline-block; margin: 0; margin-bottom: -2px; height: 35px;"/></img> You want to learn about Quarto, the next-generation of RMarkdown
+
+. . .
+
+<h2>We'll teach you</h2>
+
+Quarto syntax and formats
+
+More Markdown
+
+Even more R along the way!
+
+## Your Instructor
+
+::: {style="text-align: right;"}
+![](images/speaker.png){height="450px"}
+
+Find me at:
+
+`r fa("github")` [\@ariff118](https://github.com/ariff118)
+
+:::
+
+#  {background-color="#447099"}
+
+[3 Most Common Basic Analysis in Research]{.r-fit-text}
+
+## 1. DESCRIPTIVE ANALYSIS
+
+. . .
+
+**PURPOSE:**
+
+- Describe the distribution of the variable of interest.
+
+. . .
+
+**TECHNIQUES:**
+
+- Frequencies and Cross-tabulations for Nominal or Categorical Variables
+- Means and Means by sub-groups for Continuous Data
+
+. . .
+
+**WHEN DO WE USE THEM IN THE RESEARCH?**
+
+- Describing the Sample Profile
+- Issue of Representativeness - Non-Response Bias
+
+## 2. TEST OF DIFFERENCES
+
+. . .
+
+**PURPOSE:**
+
+- To test whether a variable of interest differ significantly across 3 or more sub-groups of the population, or
+- To test whether 2 or more subgroups of the population differ in terms of one or more variable of interest, or
+- To test whether 2 or more variables are rated differently by the population.
+
+. . .
+
+**WHEN:**
+
+- To establish whether two or more groups are statistically significantly different in terms of a particular variable of interest.
+- To establish whether two or more variables are rated significantly different by the population. This is to establish definite ranking/ordering
+
+. . .
+
+**TECHNIQUES:**
+
+- Parametric Techniques: t-test; paired t-test, 1-way ANOVA, 2-way ANOVA
+- Non-Parametric Techniques: Mann-Whitney/ Wilcoxon rank sum test; Wilcoxon signed rank sum test, Kruskal Wallis; Friedman test

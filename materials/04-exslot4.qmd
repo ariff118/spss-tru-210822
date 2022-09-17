@@ -1,0 +1,163 @@
+---
+title: "Data Analysis using IBM SPSS Statistics"
+subtitle: "Slot 4 Web Notes"
+author: "Kamarul Ariffin"
+format: html
+---
+
+# ESTABLISHING RELATIONSHIPS\
+
+**PURPOSE:**\
+
+- To establish dependence (cause-effect) relationships between two or more variables\
+- To establish the inter-relationships between two or more variables.\
+
+**TECHNIQUES:**\
+
+- Dependence Relationships\
+  - Correlation\
+  - Multiple Regression\
+  - Discriminant Analysis\
+  
+- Non-dependence Relationships\
+  - Correlation – Canonical Correlations\
+  - Factor Analysis\
+
+---
+
+## a. Correlation\
+
+Correlation analysis is used to describe the strength and direction of the linear relationship between 2 variables.\
+
+- Pearson – continuous variables\
+- Spearman – ordinal variables\
+
+`Analyze --> Correlate Bivariate`\
+
+**Strength:**\
+
+> 0.10 – 0.29 **Small**\
+> 0.30 – 0.49 **Medium**\
+> 0.50 – 1.00 **Large**\
+
+**SPSS Output**\
+![Pearson](images/slot4_table11a.png)\
+
+**In Report APA Style**\
+![](images/slot4_table11b.png)\
+
+::: callout-discussion
+There was a strong positive correlation between intention to share and actual sharing [r=0.82, n=192, p<0.01] with high levels of intention associated with high levels of actual sharing.
+:::
+
+**SPSS Output**\
+![Spearman](images/slot4_table11c.png)\
+
+::: callout-discussion
+There was a strong positive correlation between intention to share and actual sharing [r=0.76, n=192, p<0.01] with high levels of intention associated with high levels of actual sharing.
+:::
+
+**Exercise 7:**\
+Test the intercorrelations of the main variables in the study.\
+
+*Result*\
+![](images/slot4_table11d.png)\
+
+---
+
+## b. Simple Linear Regression\
+
+Simple linear regression is used when we would like to see the impact of a single independent variable on a dependent variable.\
+
+`Analyze --> Regression --> Linear`\
+
+**SPSS Output**\
+![](images/slot4_table12a.png)\
+![](images/slot4_table12b.png)\
+
+**Exercise 8:**\
+Run several simple linear regression using expected rewards, reciprocal relationship, expected contribution, self worth and climate as independent variable one at a time against intention to share.\
+
+---
+
+## c. Multiple Linear Regression\
+
+Multiple linear regression is used when we would like to see the impact of more than one independent variable on a dependent variable.\
+
+![](images/slot4_table13a.png)\
+![](images/slot4_table13b.png)\
+
+**ASSUMPTIONS:**\
+
+1. Normality\
+2. Normality of the error terms\
+3. Linerity\
+4. Multicollinearity\
+5. Constant Variance – Homoscedasticity\
+6. Outliers\
+7. Independence of the error term\
+
+**Multiple Linear Regression**\
+
+Multiple regression analysis is a statistical technique that can be used to analyze the
+relationship between a single **dependent variable** (continuous) and several **independent variables** (continuous or even nominal). In the case of nominal independent variables, **dummy variables** are introduced.\
+
+$Y = a + b_1X_1 + b_2X_2 + b_3X_3 + e$\
+
+Where:\
+$Y$ = Dependent variable\
+$a$ = Intercept\
+$b_1,\ b_2,\ b_3$ = regression coefficients (slope)\
+$X_1,\ X_2,\ X_3$ = Independent variables\
+$e$ = random error\
+
+**Things to consider:**\
+
+1. Strong Theory (conceptual or theoretical)\
+2. Measurement Error\
+  - The degree to which the variable is an accurate and consistent measure of the concept being studied. If the error is high than even the best predictors may not be able to achieve sufficient predictive accuracy.\
+3. Specification error\
+  - Inclusion of irrelevant variables or the omission of relevant variables from the set of independent variables.\
+  
+**ASSUMPTIONS:**\
+
+### 1. Normality\
+
+One of the basic assumptions is the normality which can be assessed by plotting the histogram. If the histogram shows not much deviation then we can assume the data follows a normal distribution.\
+
+![](images/slot4_assump1.png)\
+
+### 2. Normality of the error terms\
+
+The second assumption is that the error term must be normally distributed. This can be assessed by looking at the normal P-P plot. The idea is that the points should be as close as possible to the diagonal line. If they are then we can assume that the error terms are normally distributed.\
+
+![](images/slot4_assump2.png)\
+
+### 3. Linearity\
+
+The third assumption is the relationship between the independent variables and the dependent variable must be linear. This is assessed by looking at the partial plots. The idea is to see if we can draw a straight line on the scatter plot that is generated.\
+
+![](images/slot4_assump3.png)\
+
+### 4. Constant Variance – Homoscedasticity\
+
+The fourth assumption is that the variance must be constant (Homoscedasticity) as opposed to not constant (Heterosedasciticity). Heterosedasciticity is generally observed when we see a consistent pattern when we plot the studentized residual (**SRESID**) against the predicted value of Y (**ZPRED**).\
+
+![](images/slot4_assump4.png)\
+
+### 5. Multicollinearity\
+
+The fifth assumption is the collinearity problem. This is a problem when the independent variables are highly correlated among one another, generally at r > 0.8 to 0.9 which is termed as multicollinearoty. As the term independent variables connotes they should not be correlated at all among one another, low to moderate correlations are the norm and does not pose any serious problems. To assess this assumption we will look at two indicators. The first one is the VIF and tolerance. A low tolerance value of < 0.1 will result in a VIF value of > 10 as VIF is actually 1/Tolerance. If the value is more than 10 we can suspect there is a problem of multicollinearity. The second value that we should look at is the conditional index. If this value exceeds 30 we can also suspect the presence of multicollinearity. When the value is more than 30 we should also look across the variance proportions and see if we can spot any 2 or more variables with a value of 0.9 and above excluding the constant. If there are 2 or more than only we can conclude there is multicollinearity.\
+
+![](images/slot4_assump5.png)\
+![](images/slot4_assump5b.png)\
+
+
+
+
+
+
+
+
+
+

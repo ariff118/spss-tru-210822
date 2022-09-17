@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-0.9.505">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Kamarul Ariffin">
+
+<title>Data Analytics using IBM SPSS Statistics - Data Analysis using IBM SPSS Statistics</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Data Analytics using IBM SPSS Statistics</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html">Home</a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-slides" role="button" data-bs-toggle="dropdown" aria-expanded="false">Slides</a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-slides">    
+        <li>
+    <a class="dropdown-item" href="../materials/01-slot1.html">
+ <span class="dropdown-text">Intro to IBM SPSS Statistics</span></a>
+  </li>  
+        <li class="dropdown-header">Authoring Quarto</li>
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-web-notes" role="button" data-bs-toggle="dropdown" aria-expanded="false">Web Notes</a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-web-notes">    
+        <li>
+    <a class="dropdown-item" href="../materials/02-exslot2.html">
+ <span class="dropdown-text">Slot 2 - Respondents Profiling</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../materials/03-exslot3.html">
+ <span class="dropdown-text">Slot 3 - Test of Differences</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../materials/04-exslot4.html">
+ <span class="dropdown-text">Slot 4 - Establishing Relationships</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://quarto.org/">Quarto Docs</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/ariff118/"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/quarto_pub"><i class="bi bi-twitter" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">Data Analysis using IBM SPSS Statistics</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+    <div class="sidebar-item-container"> 
+        <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Workshop</a>
+      <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+        <i class="bi bi-chevron-right ms-2"></i>
+      </a>
+    </div>
+    <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../materials/01-slot1.html" class="sidebar-item-text sidebar-link">Intro to IBM SPSS Statistics</a>
+  </div>
+</li>
+    </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#establishing-relationships" id="toc-establishing-relationships" class="nav-link active" data-scroll-target="#establishing-relationships">ESTABLISHING RELATIONSHIPS<br>
+  </a>
+  <ul class="collapse">
+  <li><a href="#a.-correlation" id="toc-a.-correlation" class="nav-link" data-scroll-target="#a.-correlation">a. Correlation<br>
+  </a></li>
+  <li><a href="#b.-simple-linear-regression" id="toc-b.-simple-linear-regression" class="nav-link" data-scroll-target="#b.-simple-linear-regression">b. Simple Linear Regression<br>
+  </a></li>
+  <li><a href="#c.-multiple-linear-regression" id="toc-c.-multiple-linear-regression" class="nav-link" data-scroll-target="#c.-multiple-linear-regression">c.&nbsp;Multiple Linear Regression<br>
+  </a>
+  <ul class="collapse">
+  <li><a href="#normality" id="toc-normality" class="nav-link" data-scroll-target="#normality">1. Normality<br>
+  </a></li>
+  <li><a href="#normality-of-the-error-terms" id="toc-normality-of-the-error-terms" class="nav-link" data-scroll-target="#normality-of-the-error-terms">2. Normality of the error terms<br>
+  </a></li>
+  <li><a href="#linearity" id="toc-linearity" class="nav-link" data-scroll-target="#linearity">3. Linearity<br>
+  </a></li>
+  <li><a href="#constant-variance-homoscedasticity" id="toc-constant-variance-homoscedasticity" class="nav-link" data-scroll-target="#constant-variance-homoscedasticity">4. Constant Variance – Homoscedasticity<br>
+  </a></li>
+  <li><a href="#multicollinearity" id="toc-multicollinearity" class="nav-link" data-scroll-target="#multicollinearity">5. Multicollinearity<br>
+  </a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">Data Analysis using IBM SPSS Statistics</h1>
+<p class="subtitle lead">Slot 4 Web Notes</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Kamarul Ariffin </p>
+          </div>
+  </div>
+    
+    
+  </div>
+  
+
+</header>
+
+<section id="establishing-relationships" class="level1">
+<h1>ESTABLISHING RELATIONSHIPS<br>
+</h1>
+<p><strong>PURPOSE:</strong><br>
+</p>
+<ul>
+<li>To establish dependence (cause-effect) relationships between two or more variables<br>
+</li>
+<li>To establish the inter-relationships between two or more variables.<br>
+</li>
+</ul>
+<p><strong>TECHNIQUES:</strong><br>
+</p>
+<ul>
+<li>Dependence Relationships<br>
+
+<ul>
+<li>Correlation<br>
+</li>
+<li>Multiple Regression<br>
+</li>
+<li>Discriminant Analysis<br>
+</li>
+</ul></li>
+<li>Non-dependence Relationships<br>
+
+<ul>
+<li>Correlation – Canonical Correlations<br>
+</li>
+<li>Factor Analysis<br>
+</li>
+</ul></li>
+</ul>
+<hr>
+<section id="a.-correlation" class="level2">
+<h2 class="anchored" data-anchor-id="a.-correlation">a. Correlation<br>
+</h2>
+<p>Correlation analysis is used to describe the strength and direction of the linear relationship between 2 variables.<br>
+</p>
+<ul>
+<li>Pearson – continuous variables<br>
+</li>
+<li>Spearman – ordinal variables<br>
+</li>
+</ul>
+<p><code>Analyze --&gt; Correlate Bivariate</code><br>
+</p>
+<p><strong>Strength:</strong><br>
+</p>
+<blockquote class="blockquote">
+<p>0.10 – 0.29 <strong>Small</strong><br>
+0.30 – 0.49 <strong>Medium</strong><br>
+0.50 – 1.00 <strong>Large</strong><br>
+</p>
+</blockquote>
+<p><strong>SPSS Output</strong><br>
+<img src="images/slot4_table11a.png" class="img-fluid" alt="Pearson"><br>
+</p>
+<p><strong>In Report APA Style</strong><br>
+<img src="images/slot4_table11b.png" class="img-fluid"><br>
+</p>
+<div class="callout-discussion callout callout-style-default no-icon callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Discussion
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>There was a strong positive correlation between intention to share and actual sharing [r=0.82, n=192, p&lt;0.01] with high levels of intention associated with high levels of actual sharing.</p>
+</div>
+</div>
+<p><strong>SPSS Output</strong><br>
+<img src="images/slot4_table11c.png" class="img-fluid" alt="Spearman"><br>
+</p>
+<div class="callout-discussion callout callout-style-default no-icon callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Discussion
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>There was a strong positive correlation between intention to share and actual sharing [r=0.76, n=192, p&lt;0.01] with high levels of intention associated with high levels of actual sharing.</p>
+</div>
+</div>
+<p><strong>Exercise 7:</strong><br>
+Test the intercorrelations of the main variables in the study.<br>
+</p>
+<p><em>Result</em><br>
+<img src="images/slot4_table11d.png" class="img-fluid"><br>
+</p>
+<hr>
+</section>
+<section id="b.-simple-linear-regression" class="level2">
+<h2 class="anchored" data-anchor-id="b.-simple-linear-regression">b. Simple Linear Regression<br>
+</h2>
+<p>Simple linear regression is used when we would like to see the impact of a single independent variable on a dependent variable.<br>
+</p>
+<p><code>Analyze --&gt; Regression --&gt; Linear</code><br>
+</p>
+<p><strong>SPSS Output</strong><br>
+<img src="images/slot4_table12a.png" class="img-fluid"><br>
+<img src="images/slot4_table12b.png" class="img-fluid"><br>
+</p>
+<p><strong>Exercise 8:</strong><br>
+Run several simple linear regression using expected rewards, reciprocal relationship, expected contribution, self worth and climate as independent variable one at a time against intention to share.<br>
+</p>
+<hr>
+</section>
+<section id="c.-multiple-linear-regression" class="level2">
+<h2 class="anchored" data-anchor-id="c.-multiple-linear-regression">c.&nbsp;Multiple Linear Regression<br>
+</h2>
+<p>Multiple linear regression is used when we would like to see the impact of more than one independent variable on a dependent variable.<br>
+</p>
+<p><img src="images/slot4_table13a.png" class="img-fluid"><br>
+<img src="images/slot4_table13b.png" class="img-fluid"><br>
+</p>
+<p><strong>ASSUMPTIONS:</strong><br>
+</p>
+<ol type="1">
+<li>Normality<br>
+</li>
+<li>Normality of the error terms<br>
+</li>
+<li>Linerity<br>
+</li>
+<li>Multicollinearity<br>
+</li>
+<li>Constant Variance – Homoscedasticity<br>
+</li>
+<li>Outliers<br>
+</li>
+<li>Independence of the error term<br>
+</li>
+</ol>
+<p><strong>Multiple Linear Regression</strong><br>
+</p>
+<p>Multiple regression analysis is a statistical technique that can be used to analyze the relationship between a single <strong>dependent variable</strong> (continuous) and several <strong>independent variables</strong> (continuous or even nominal). In the case of nominal independent variables, <strong>dummy variables</strong> are introduced.<br>
+</p>
+<p><span class="math inline">\(Y = a + b_1X_1 + b_2X_2 + b_3X_3 + e\)</span><br>
+</p>
+<p>Where:<br>
+<span class="math inline">\(Y\)</span> = Dependent variable<br>
+<span class="math inline">\(a\)</span> = Intercept<br>
+<span class="math inline">\(b_1,\ b_2,\ b_3\)</span> = regression coefficients (slope)<br>
+<span class="math inline">\(X_1,\ X_2,\ X_3\)</span> = Independent variables<br>
+<span class="math inline">\(e\)</span> = random error<br>
+</p>
+<p><strong>Things to consider:</strong><br>
+</p>
+<ol type="1">
+<li>Strong Theory (conceptual or theoretical)<br>
+</li>
+<li>Measurement Error<br>
+</li>
+</ol>
+<ul>
+<li>The degree to which the variable is an accurate and consistent measure of the concept being studied. If the error is high than even the best predictors may not be able to achieve sufficient predictive accuracy.<br>
+</li>
+</ul>
+<ol start="3" type="1">
+<li>Specification error<br>
+</li>
+</ol>
+<ul>
+<li>Inclusion of irrelevant variables or the omission of relevant variables from the set of independent variables.<br>
+</li>
+</ul>
+<p><strong>ASSUMPTIONS:</strong><br>
+</p>
+<section id="normality" class="level3">
+<h3 class="anchored" data-anchor-id="normality">1. Normality<br>
+</h3>
+<p>One of the basic assumptions is the normality which can be assessed by plotting the histogram. If the histogram shows not much deviation then we can assume the data follows a normal distribution.<br>
+</p>
+<p><img src="images/slot4_assump1.png" class="img-fluid"><br>
+</p>
+</section>
+<section id="normality-of-the-error-terms" class="level3">
+<h3 class="anchored" data-anchor-id="normality-of-the-error-terms">2. Normality of the error terms<br>
+</h3>
+<p>The second assumption is that the error term must be normally distributed. This can be assessed by looking at the normal P-P plot. The idea is that the points should be as close as possible to the diagonal line. If they are then we can assume that the error terms are normally distributed.<br>
+</p>
+<p><img src="images/slot4_assump2.png" class="img-fluid"><br>
+</p>
+</section>
+<section id="linearity" class="level3">
+<h3 class="anchored" data-anchor-id="linearity">3. Linearity<br>
+</h3>
+<p>The third assumption is the relationship between the independent variables and the dependent variable must be linear. This is assessed by looking at the partial plots. The idea is to see if we can draw a straight line on the scatter plot that is generated.<br>
+</p>
+<p><img src="images/slot4_assump3.png" class="img-fluid"><br>
+</p>
+</section>
+<section id="constant-variance-homoscedasticity" class="level3">
+<h3 class="anchored" data-anchor-id="constant-variance-homoscedasticity">4. Constant Variance – Homoscedasticity<br>
+</h3>
+<p>The fourth assumption is that the variance must be constant (Homoscedasticity) as opposed to not constant (Heterosedasciticity). Heterosedasciticity is generally observed when we see a consistent pattern when we plot the studentized residual (<strong>SRESID</strong>) against the predicted value of Y (<strong>ZPRED</strong>).<br>
+</p>
+<p><img src="images/slot4_assump4.png" class="img-fluid"><br>
+</p>
+</section>
+<section id="multicollinearity" class="level3">
+<h3 class="anchored" data-anchor-id="multicollinearity">5. Multicollinearity<br>
+</h3>
+<p>The fifth assumption is the collinearity problem. This is a problem when the independent variables are highly correlated among one another, generally at r &gt; 0.8 to 0.9 which is termed as multicollinearoty. As the term independent variables connotes they should not be correlated at all among one another, low to moderate correlations are the norm and does not pose any serious problems. To assess this assumption we will look at two indicators. The first one is the VIF and tolerance. A low tolerance value of &lt; 0.1 will result in a VIF value of &gt; 10 as VIF is actually 1/Tolerance. If the value is more than 10 we can suspect there is a problem of multicollinearity. The second value that we should look at is the conditional index. If this value exceeds 30 we can also suspect the presence of multicollinearity. When the value is more than 30 we should also look across the variance proportions and see if we can spot any 2 or more variables with a value of 0.9 and above excluding the constant. If there are 2 or more than only we can conclude there is multicollinearity.<br>
+</p>
+<p><img src="images/slot4_assump5.png" class="img-fluid"><br>
+<img src="images/slot4_assump5b.png" class="img-fluid"><br>
+</p>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">This page was built with ❤️ and <a href="https://quarto.org/">Quarto</a> by <a href="https://ariff118.github.io/kamansor.github.io">KA Mansor</a>.</div>   
+  </div>
+</footer>
+
+
+
+</body></html>

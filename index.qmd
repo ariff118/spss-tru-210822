@@ -1,0 +1,142 @@
+---
+title: "Data Analytics using IBM SPSS Statistics"
+subtitle: "From Survey Data into Paper Publications"
+author: "Kamarul Ariffin"
+format: html
+---
+
+## General Information
+
+### Description
+
+This is a full day beginner to intermediate level workshop on how to analyze survey data recorded from a structured questionnaire using IBM SPSS Statistics.
+
+### Expectations and Goals
+
+At the end of the session, participant will be able to know how to handle survey data and prepare the data for further analysis using statistical software IBM SPSS Statistics (any version). In addition, participant will know how to analyze data with respect to specific research questions or objectives, and eventually present the result in proper way in papers or articles for publication purposes.
+
+## Workshop Materials
+
+### Required Materials
+
+-   IBM SPSS Statistics (any version -- IBM SPSS Statistics version 26 will be provided if participant don't have one installed in his or her computer)
+-   Presentation slides (provided by instructor)
+-   Data set (provided by instructor or use own data set)
+
+### Optional Materials
+
+Will be provided during the workshop if any.
+
+## Required Text
+
+Provided by instructor
+
+## Workshop Schedule
+
+| Time           | Activity     |
+|:---------------|:-------------|
+| 08:00 -- 08:15 | Registration |
+| 08:15 -- 10:15 | Slot 1       |
+| 10:15 -- 10:30 | Break        |
+| 10:30 -- 12:30 | Slot 2       |
+| 12:30 -- 14:00 | Lunch        |
+| 14:00 -- 16:00 | Slot 3       |
+| 16:00 -- 16:30 | Q&A          |
+| 16:30          | Session End  |
+
++-----------+------------------------------------------------------+----------------+------------------------------------------------------------------------------------+
+| Item      | Topic                                                | Duration       | Exercise                                                                           |
++===========+======================================================+:==============:+====================================================================================+
+| Slot 1    | Pre-works                                            | 2 -- 2 ½ hours | Step by step approach preparing survey data for analysis using IBM SPSS Statistics |
+|           |                                                      |                |                                                                                    |
+|           | \- Data preparation                                  |                |                                                                                    |
+|           |                                                      |                |                                                                                    |
+|           | \- Code and recode variables                         |                |                                                                                    |
+|           |                                                      |                |                                                                                    |
+|           | \- Missing values                                    |                |                                                                                    |
+|           |                                                      |                |                                                                                    |
+|           | \- Normality                                         |                |                                                                                    |
+|           |                                                      |                |                                                                                    |
+|           | \- Compute new variables                             |                |                                                                                    |
+|           |                                                      |                |                                                                                    |
+|           | \- Outliers                                          |                |                                                                                    |
+|           |                                                      |                |                                                                                    |
+|           | \- etc.                                              |                |                                                                                    |
++-----------+------------------------------------------------------+----------------+------------------------------------------------------------------------------------+
+| Slot 2    | *Descriptive Statistics*                             | 2 -- 2 ½ hours | How to report demographic profile in papers?                                       |
+|           |                                                      |                |                                                                                    |
+|           | \- Categorical data                                  |                | How to report descriptive analysis in paper?                                       |
+|           |                                                      |                |                                                                                    |
+|           | \- Numerical data                                    |                | Create and edit basic data visualization.                                          |
+|           |                                                      |                |                                                                                    |
+|           | \- Frequency distribution                            |                | Analyze and present Likert Scale data                                              |
+|           |                                                      |                |                                                                                    |
+|           | \- Data visualization                                |                | How to run basic inferential statistics analysis?                                  |
+|           |                                                      |                |                                                                                    |
+|           | \- Handling of Likert Scale data                     |                |                                                                                    |
+|           |                                                      |                |                                                                                    |
+|           | *Inferential Statistics (Basic)*                     |                |                                                                                    |
+|           |                                                      |                |                                                                                    |
+|           | \- t-test                                            |                |                                                                                    |
+|           |                                                      |                |                                                                                    |
+|           | \- one way ANOVA                                     |                |                                                                                    |
+|           |                                                      |                |                                                                                    |
+|           | \- chi-square test of independence                   |                |                                                                                    |
++-----------+------------------------------------------------------+----------------+------------------------------------------------------------------------------------+
+| Slot 3    | Inferential Statistics (Intermediate)                | 2 -- 2 ½ hours | Testing hypothesis on relationship between variables.                              |
+|           |                                                      |                |                                                                                    |
+|           | \- Correlation                                       |                | How to report in papers for publication purpose (APA 7^th^ edition)                |
+|           |                                                      |                |                                                                                    |
+|           | \- Regression                                        |                |                                                                                    |
+|           |                                                      |                |                                                                                    |
+|           | \- Moderation & Mediation Analysis (if time permits) |                |                                                                                    |
++-----------+------------------------------------------------------+----------------+------------------------------------------------------------------------------------+
+
+## Instructor
+
+Kamarul Ariffin Mansor (M.Sc.) is a senior lecturer at Faculty of Computer Science and Mathematics, Universiti Teknologi MARA (UiTM), Kedah Branch Campus, Malaysia. His research interests include the application of structural equation modelling and statistical applications in other field of studies, data analytics and visualization using `IBM SPSS Statistics`, `Excel`, `R`, `Google Data Studio`, `Tableau`, etc.
+
+Personal websites: <https://ariff118.github.io/kamansor.github.io/>\
+CV: <https://ariff118.github.io/kamansor.github.io/files/cv-kamarul.pdf>
+
+## Fundamentals of Data Analysis
+
+3 Most Common Basic Analysis in Research
+
+### 1. DESCRIPTIVE ANALYSIS
+
+**PURPOSE:**
+
+- Describe the distribution of the variable of interest.
+
+**TECHNIQUES:**
+
+- Frequencies and Cross-tabulations for Nominal or Categorical Variables
+- Means and Means by sub-groups for Continuous Data
+
+**WHEN DO WE USE THEM IN THE RESEARCH?**
+
+- Describing the Sample Profile
+- Issue of Representativeness - Non-Response Bias
+
+### 2. TEST OF DIFFERENCES
+
+**PURPOSE:**
+
+- To test whether a variable of interest differ significantly across 3 or more sub-groups of the population, or
+- To test whether 2 or more subgroups of the population differ in terms of one or more variable of interest, or
+- To test whether 2 or more variables are rated differently by the population.
+
+**WHEN:**
+
+- To establish whether two or more groups are statistically significantly different in terms of a particular variable of interest.
+- To establish whether two or more variables are rated significantly different by the population. This is to establish definite ranking/ordering
+
+**TECHNIQUES:**
+
+- Parametric Techniques: t-test; paired t-test, 1-way ANOVA, 2-way ANOVA
+- Non-Parametric Techniques: Mann-Whitney/ Wilcoxon rank sum test; Wilcoxon signed rank sum test, Kruskal Wallis; Friedman test
+
+------------------------------------------------------------------------
+
+![](https://i.creativecommons.org/l/by/4.0/88x31.png) This work is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).

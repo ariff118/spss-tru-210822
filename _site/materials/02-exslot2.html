@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-0.9.505">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Kamarul Ariffin">
+
+<title>Data Analytics using IBM SPSS Statistics - Data Analysis using IBM SPSS Statistics</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Data Analytics using IBM SPSS Statistics</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html">Home</a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-slides" role="button" data-bs-toggle="dropdown" aria-expanded="false">Slides</a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-slides">    
+        <li>
+    <a class="dropdown-item" href="../materials/01-slot1.html">
+ <span class="dropdown-text">Intro to IBM SPSS Statistics</span></a>
+  </li>  
+        <li class="dropdown-header">Authoring Quarto</li>
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-web-notes" role="button" data-bs-toggle="dropdown" aria-expanded="false">Web Notes</a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-web-notes">    
+        <li>
+    <a class="dropdown-item" href="../materials/02-exslot2.html">
+ <span class="dropdown-text">Slot 2 - Respondents Profiling</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../materials/03-exslot3.html">
+ <span class="dropdown-text">Slot 3 - Test of Differences</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../materials/04-exslot4.html">
+ <span class="dropdown-text">Slot 4 - Establishing Relationships</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://quarto.org/">Quarto Docs</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/ariff118/"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/quarto_pub"><i class="bi bi-twitter" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">Data Analysis using IBM SPSS Statistics</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+    <div class="sidebar-item-container"> 
+        <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Workshop</a>
+      <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+        <i class="bi bi-chevron-right ms-2"></i>
+      </a>
+    </div>
+    <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../materials/01-slot1.html" class="sidebar-item-text sidebar-link">Intro to IBM SPSS Statistics</a>
+  </div>
+</li>
+    </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#profiling-the-respondents" id="toc-profiling-the-respondents" class="nav-link active" data-scroll-target="#profiling-the-respondents">PROFILING THE RESPONDENTS<br>
+  </a>
+  <ul class="collapse">
+  <li><a href="#descriptive-analysis" id="toc-descriptive-analysis" class="nav-link" data-scroll-target="#descriptive-analysis">1. DESCRIPTIVE ANALYSIS<br>
+  </a>
+  <ul class="collapse">
+  <li><a href="#a.-response-rates" id="toc-a.-response-rates" class="nav-link" data-scroll-target="#a.-response-rates">a. Response Rates</a></li>
+  <li><a href="#b.-who-are-our-respondents" id="toc-b.-who-are-our-respondents" class="nav-link" data-scroll-target="#b.-who-are-our-respondents">b. Who are our respondents?</a></li>
+  <li><a href="#c.-what-is-the-current-state-of-affair-for-the-variables-of-interest" id="toc-c.-what-is-the-current-state-of-affair-for-the-variables-of-interest" class="nav-link" data-scroll-target="#c.-what-is-the-current-state-of-affair-for-the-variables-of-interest">c.&nbsp;What is the Current State of Affair for the Variables of Interest?<br>
+  </a></li>
+  <li><a href="#d.-chi2-test-crosstabulation" id="toc-d.-chi2-test-crosstabulation" class="nav-link" data-scroll-target="#d.-chi2-test-crosstabulation">d.&nbsp;<span class="math inline">\(\chi^2\)</span> Test (Crosstabulation)<br>
+  </a></li>
+  <li><a href="#e.-problem-of-non-response-bias" id="toc-e.-problem-of-non-response-bias" class="nav-link" data-scroll-target="#e.-problem-of-non-response-bias">e. Problem of Non-Response Bias<br>
+  </a></li>
+  <li><a href="#f.-goodness-of-fit-test" id="toc-f.-goodness-of-fit-test" class="nav-link" data-scroll-target="#f.-goodness-of-fit-test">f.&nbsp;Goodness of Fit Test<br>
+  </a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">Data Analysis using IBM SPSS Statistics</h1>
+<p class="subtitle lead">Slot 2 Web Notes</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Kamarul Ariffin </p>
+          </div>
+  </div>
+    
+    
+  </div>
+  
+
+</header>
+
+<section id="profiling-the-respondents" class="level1">
+<h1>PROFILING THE RESPONDENTS<br>
+</h1>
+<section id="descriptive-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="descriptive-analysis">1. DESCRIPTIVE ANALYSIS<br>
+</h2>
+<p><strong>PURPOSE:</strong><br>
+- Describe the distribution of the variable of interest.<br>
+</p>
+<p><strong>TECHNIQUES:</strong><br>
+- Frequencies and Cross-tabulations for Nominal or Categorical Variables<br>
+- Means and Means by sub-groups for Continuous Data<br>
+</p>
+<p><strong>WHEN DO WE USE THEM IN THE RESEARCH?</strong><br>
+- Describing the Sample Profile<br>
+- Issue of Representativeness – Response Rate versus Non-Response Bias</p>
+<section id="a.-response-rates" class="level3">
+<h3 class="anchored" data-anchor-id="a.-response-rates">a. Response Rates</h3>
+<p>In any report the first thing that is normally reported is the response rates. In any typical mail survey we should always remember that to get a response rate of 100% is nearly impossible. In the Malaysia context the response rates for mail survey is usually 10-20% only.</p>
+<p>Table 1<br>
+<em>Response rate</em></p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: center;">Number/Frequency</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Number of Questionnaires distributed</td>
+<td style="text-align: center;">500</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Number of questionnaire returned</td>
+<td style="text-align: center;">120</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Response rate</td>
+<td style="text-align: center;">24%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Number of usable questionnaire</td>
+<td style="text-align: center;">98</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Effective Response rate</td>
+<td style="text-align: center;">19.6%</td>
+</tr>
+</tbody>
+</table>
+<p>There is a difference between response rate and effective response rate. The response rate is equal to the number of questionnaires received divided by the number of questionnaires sent out. The effective response rate on the other hand is equal to the number of usable questionnaire divided by the total number sent out.</p>
+<p><strong>Why is this necessary?</strong></p>
+<p>When the response rate is low it raises question about the representativeness of the sample. We might have say a majority of small sized companies but our research objectives says that we would like to study small and medium sized enterprises. This by itself points to some sort of bias which needs to be highlighted later in the limitations of the study.</p>
+<p>Another reason is the problem of non response. Would the responses of those who have not responded be different form those who responded? This can only be tested if we know the profile of the companies that have not responded or else this would be impossible to do. We can also justify this by doing a “wave analysis” as suggested by <code>Armstrong and Overton (1977)</code>, which will be discussed later.</p>
+<blockquote class="blockquote">
+<p>According to Harbaugh (2002, p.&nbsp;70). “Response rates for traditional mail surveys have continued to decline to a point where the average is below 20%.” The response rate of 19.6% matches the usual response rate of 10-20% using the same method in Malaysia. As the respondents for this study are key persons in the organization, they are known to be less likely to respond to mailed questionnaires than people in the general population (Hunt &amp; Chonko 1987).</p>
+</blockquote>
+<p><strong>References</strong></p>
+<p><code>Harbaugh, R. (2002)</code>, “Proven lessons for generating good mail survey response rates”, Medical Marketing and Media, Vol 37 No 10, pp.&nbsp;70-75.</p>
+<p><code>Hunt, S.D. and Chonko, L.B. (1987)</code>, “Ethical Problems of Advertising Agency Executives”, Journal of Advertising, Vol. 53 No 1, pp.&nbsp;16-24.</p>
+<p><code>Armstrong, S. and Overton, T.S. (1977)</code>, “Estimating Nonresponse Bias in Mail Surveys”, Journal of Marketing Research, Vol 14, pp.&nbsp;396-402.</p>
+</section>
+<section id="b.-who-are-our-respondents" class="level3">
+<h3 class="anchored" data-anchor-id="b.-who-are-our-respondents">b. Who are our respondents?</h3>
+<p>In any report typically there will be a description of the profile of respondents. This is done to highlight that the profile suits the purpose of the study and also if it does not it can be used later to justify the non significance of some research hypotheses.</p>
+<p>To do this we will ask for the frequency distribution of the nominal variables that we included in the profile section of our questionnaire.</p>
+<p><code>Analyze --&gt; Descriptive Statistics --&gt; Frequencies</code></p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If we have 10 nominal variables we will be getting 10 different tables like the ones above. We can also charts like the bar chart or the pie char as above. You do not need both in the report. The idea is that for academic report normally tables are used whereas for business presentation charts are more suitable. Kindly refrain from “cut and paste” syndrome. You will need to draw a frequency table like the one below.</p>
+</div>
+</div>
+<p>Table 2<br>
+<em>Profile of Respondents</em><br>
+<img src="images/slot1_table2.png" class="img-fluid"></p>
+<p>Table 2 summarizes the demographic profile of the respondents. In terms of respondents, almost 75% were male and they came from various departments although a bigger majority was from the Engineering department. Thus, we can conclude that the respondents are sufficiently well versed with the company and able to comprehend the needs of the questionnaire.<br>
+</p>
+<ul>
+<li><p>Do not repeat the information contained in the Table 2. For example, “There are 75% male whilst the remaining 25% were female”. This statement does not bring to bear any new information, not already contained in the Table, thus translating it into prose form is futile.<br>
+</p></li>
+<li><p>When writing the description, pick the pattern that is supporting the arguments that your sample is appropriate to the subject of the study and that the data are obtained from credible sources.<br>
+</p></li>
+<li><p>The whole idea of having the sample profile is to ensure that data thus obtained from the sample you obtained, is credible and therefore provide useful basis for the subsequent analysis and inference.<br>
+</p></li>
+</ul>
+<ol type="1">
+<li>Frequency Analysis<br>
+</li>
+</ol>
+<ul>
+<li>All nominal variables are profiled in a table to show the profile of the respondents or responding companies.<br>
+Who are our respondents?<br>
+</li>
+</ul>
+<ol start="2" type="1">
+<li>Descriptive analysis<br>
+</li>
+</ol>
+<ul>
+<li><p>Histogram</p></li>
+<li><p>Mean and Standard deviation</p></li>
+<li><p>Skewness and Kurtosis</p></li>
+</ul>
+<p><img src="images/slot1_pic1.png" class="img-fluid"><br>
+</p>
+<p><img src="images/slot1_pic2.png" class="img-fluid"><br>
+</p>
+<p><img src="images/slot1_pic3.png" class="img-fluid"><br>
+</p>
+<p><img src="images/slot1_pic4.png" class="img-fluid"><br>
+</p>
+<p><strong>Exercise 1:</strong></p>
+<p>Complete the table with the other demographic profile characteristics of the respondents.</p>
+<p><strong>Question:</strong></p>
+<p>Is our sample representative?</p>
+<p><img src="images/slot1_pic5.png" class="img-fluid"><br>
+</p>
+<p>We must also remember that not all demographic variables are nominal in nature. For example in our questionnaire, age, organizational tenure and work tenure were actual number of years not in terms of interval classes as such a frequency analysis would be futile.</p>
+<p>We would ask for a descriptive analysis where the mean and standard deviation of the variables would be noted. The proper table is presented below.</p>
+<p>Table 3<br>
+<em>Descriptive profile of respondents</em><br>
+<img src="images/slot1_table3.png" class="img-fluid"><br>
+</p>
+<div class="callout-discussion callout callout-style-default no-icon callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Discussion
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A short description should be written to explain the table like this. For age (M = 33.39, SD = 8.823) suggests that the workforce in this company is young with organizational tenure (M = 5.36, SD = 4.435) which shows that most were still in the first few years of their employment with this company whereas the work tenure (M = 9.04, SD = 7.276) suggests that the workforce may be very mobile with movement from job to job.</p>
+</div>
+</div>
+</section>
+<section id="c.-what-is-the-current-state-of-affair-for-the-variables-of-interest" class="level3">
+<h3 class="anchored" data-anchor-id="c.-what-is-the-current-state-of-affair-for-the-variables-of-interest">c.&nbsp;What is the Current State of Affair for the Variables of Interest?<br>
+</h3>
+<ul>
+<li>What is the current level of the variables of interest?<br>
+</li>
+</ul>
+<p>TYPICAL QUESTIONS<br>
+</p>
+<ul>
+<li>What is the level of intention to share information in the organization?<br>
+</li>
+<li>What is the level of actual sharing in the organization?<br>
+</li>
+</ul>
+<p>To do this we will ask for the descriptive analysis of the continuous variables that we computed from our questionnaire.<br>
+</p>
+<p><code>Analyze --&gt; Descriptive Statistics --&gt; Descriptives</code><br>
+</p>
+<p><strong>SPSS Output</strong><br>
+<img src="images/slot1_table4a.png" class="img-fluid"><br>
+</p>
+<p><strong>In Report APA Style</strong><br>
+Table 4<br>
+<em>Descriptive statistics of the intention to share and actual sharing in the organization</em><br>
+<img src="images/slot1_table4b.png" class="img-fluid"><br>
+</p>
+<div class="callout-discussion callout callout-style-default no-icon callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Discussion
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Intention to share information (M = 3.82, SD = 0.639) suggest that the workforce in this company have high intention to share information. An examination of actual sharing (M = 4.06, SD = 0.583) also shows that they do actually share information among the colleagues in the same organization.<br>
+</p>
+<p>The above reflects the general situation; differences do occur across position, department, gender, position and educational level. This will be explored later.</p>
+</div>
+</div>
+<p><strong>Exercise 2:</strong><br>
+</p>
+<p>Complete the table with the other main variables of the study and a short description of each variable.<br>
+</p>
+</section>
+<section id="d.-chi2-test-crosstabulation" class="level3">
+<h3 class="anchored" data-anchor-id="d.-chi2-test-crosstabulation">d.&nbsp;<span class="math inline">\(\chi^2\)</span> Test (Crosstabulation)<br>
+</h3>
+<p>Chi Square tests can be divided into 2 types:<br>
+</p>
+<ol type="1">
+<li>Test for independence<br>
+</li>
+</ol>
+<ul>
+<li>This test is used when you wish to explore the relationship between 2 categorical variables with each having 2 or more categories<br>
+</li>
+<li>Example “Is the proportion of male employees with high intention to share information the same as the proportion of female with high intention to share information?”<br>
+</li>
+<li>Gender has (1= Male/2=Female) whereas Level we have (1=Low/2=High)<br>
+</li>
+<li>We will have a (2 X 2) contingency table<br>
+</li>
+</ul>
+<ol start="2" type="1">
+<li>Goodness of Fit<br>
+</li>
+</ol>
+<ul>
+<li>This test is used to see if a given distribution follows a theoretical distribution say a normal, binomial or whatever distribution.<br>
+</li>
+</ul>
+<p>To use the test for independence we will ask for the descriptive analysis and then select crosstabs and use the variables gender and position in the analysis.<br>
+</p>
+<p><code>Analyze --&gt; Descriptive Statistics --&gt; Crosstabs</code><br>
+</p>
+<p><strong>SPSS Output</strong><br>
+<img src="images/slot1_table5a.png" class="img-fluid"><br>
+</p>
+<p>The Continuity Correction value represents the Yates Correction for Continuity, this value is designed to correct or compensate for what some writers feel is an overestimate of the chi-square value when used with a 2 X 2 table. (Pallant, 2001)<br>
+</p>
+<div class="callout-assumption: callout callout-style-default no-icon callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Assumption:
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The lowest expected frequency in any cell should be 5 or more. Some authors suggest a less stringent criterion: at least 80 percent of cells should have expected frequencies of 5 or more (<code>Pallant, 2001</code>). The assumption is tested by looking at the (b) which gives us the % of cells with expected values less than 5. If the value exceeds 20% then this test is not valid.</p>
+</div>
+</div>
+<p><strong>Reference</strong><br>
+<code>Pallant, J. (2001)</code>. SPSS Survival Manual: A step by step guide to data analysis using SPSS for Windows (Version 10), NSW, Australia: Allen &amp; Unwin.<br>
+</p>
+<p><strong>In Report APA Style</strong><br>
+Table 5<br>
+<em>Percentage Distribution of Low and High Intention to share Information</em><br>
+<img src="images/slot1_table5b.png" class="img-fluid"><br>
+</p>
+<div class="callout-discussion callout callout-style-default no-icon callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Discussion
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The <span class="math inline">\(\chi^2\)</span> value of 7.704 (p&lt; 0.01) indicates that intention to share information is not independent of gender. We can see that for males, 23.6% have high intention to share compared to only 4.2% among female. Thus we can conclude that male employees have higher intention to share.</p>
+</div>
+</div>
+<p><strong>Exercise 3:</strong><br>
+Test whether the level of intention to share is independent of department, position and education level.<br>
+</p>
+</section>
+<section id="e.-problem-of-non-response-bias" class="level3">
+<h3 class="anchored" data-anchor-id="e.-problem-of-non-response-bias">e. Problem of Non-Response Bias<br>
+</h3>
+<p>Non response Bias is a test to determine whether responses of those who have not responded are different from those who responded? This can only be tested if we know the profile of the companies that have not responded or else this would be impossible to do. We can also justify this by doing a “wave analysis” as suggested by <code>Armstrong and Overton (1977)</code>, which will be discussed later.<br>
+</p>
+<blockquote class="blockquote">
+<p>As suggested by Zou et al.&nbsp;(1997), owing to the lack of comparable data from the non-responding firms, direct comparison of the responding and non-responding firms was not possible. We used the wave analysis method with the Student’s t-test as the next best approach to compare between the early and late replies (replies received after the follow up contacts) as suggested by Armstrong and Overton (1977). The wave analysis method assumes that those who respond less readily are more like non-respondents. (Zou et al., 1997). They suggested using the t-test procedure under the assumptions of both equal and unequal group variances. In the t-test analysis, we found no between-group mean differences at the 5% level for any of the variables in the study. Thus, it may be concluded that non-response bias was not of particular influence in this research. (Skarmeas et al., 2002).<br>
+</p>
+</blockquote>
+<p><strong>References</strong><br>
+<code>Harbaugh, R. (2002)</code>, “Proven lessons for generating good mail survey response rates”, Medical Marketing and Media, Vol 37 No 10, pp.&nbsp;70-75.<br>
+</p>
+<p><code>Hunt, S.D. and Chonko, L.B. (1987)</code>, “Ethical Problems of Advertising Agency Executives”, Journal of Advertising, Vol. 53 No 1, pp.&nbsp;16-24.<br>
+</p>
+<p><code>Armstrong, S. and Overton, T.S. (1977)</code>, “Estimating Nonresponse Bias in Mail Surveys”, Journal of Marketing Research, Vol 14, pp.&nbsp;396-402.<br>
+</p>
+<p><code>Skarmeas, D., Katsikeas, C.K. and Schlegelmilch, B. (2002)</code>, “Drivers of commitment and its impact on performance in cross-cultural buyerseller relationships: the importer’s perspective”, Journal of International Business Studies, Vol. 33 No.&nbsp;4, pp.&nbsp;757-83.<br>
+</p>
+<p><code>Zou, S., Andrus, D.M. and Norvell, D.W. (1997)</code>, “Standardization of international marketing strategy by firms from a developing country”, International Marketing Review, Vol. 14 No 2, pp.&nbsp;107-123.<br>
+</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>During the data collection stage we have to note the early and late responses by using some criteria. Normally we will allow say about 2 months as cut off date for returns after the first posting and then when we send reminders; all the subsequent returns will be classified as late returns. We usually code them say 1=Early and 2=Late. So we have created another new nominal variable called <strong>response</strong>.</p>
+</div>
+</div>
+<p>Some researchers also do the postings using waves, ie; first wave and second wave. If that is the case then we have to also test the returns of the first wave with those of the second wave.<br>
+</p>
+<p><strong>SPSS Outputs</strong><br>
+<img src="images/slot1_table6a.png" class="img-fluid"><br>
+<img src="images/slot1_table6b.png" class="img-fluid"><br>
+</p>
+<p><strong>In Report APA Style</strong><br>
+Table 6<br>
+<em>Chi Square test for Early versus Late responses</em><br>
+<img src="images/slot1_table6c.png" class="img-fluid"><br>
+</p>
+<div class="callout-discussion callout callout-style-default no-icon callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Discussion
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In comparing the demographic profiles of the early and late responses, it is noted that there is little difference in terms of gender (31.9% early responses from males compared to 33.3% early responses from females). The Chi-Square value of 0.000 suggests that there are no differences at all in the pattern of responses in terms of gender.<br>
+</p>
+<p>On the whole, one can argue that there is little significant difference in the demographic profiles of the early and late responses; thus we can conclude that the sample is representative of the population of interest.</p>
+</div>
+</div>
+<p><strong>Exercise 4:</strong><br>
+Test whether the there are any non-response bias for the other demographic variables of department, position and education level.<br>
+</p>
+</section>
+<section id="f.-goodness-of-fit-test" class="level3">
+<h3 class="anchored" data-anchor-id="f.-goodness-of-fit-test">f.&nbsp;Goodness of Fit Test<br>
+</h3>
+<p>The second test that uses the Chi Square is the goodness of fit test. This test is done to ascertain if the sample follows a pre-specified distribution. Let’s say we would to test whether the gender follows a Chi square distribution proportion of 50%.<br>
+</p>
+<p><code>Analyze --&gt; Nonparametric Test --&gt; Chi-Square</code><br>
+</p>
+<p>The null hypothesis states that the sample follows a Chi Square distributionwith p = 0.5 whereas the alternate says it does not follow this distribution.<br>
+</p>
+<p><img src="images/slot1_table7.png" class="img-fluid"><br>
+</p>
+<div class="callout-discussion callout callout-style-default no-icon callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Discussion
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Since the p-value &lt; 0.05, thus we accept the alternate that states that the distribution does not follow the stated distribution. This is evident from the distribution as 75% of the samples are males whereas only 25% are females. If the distribution is followed then we should be getting 50% males and 50% females.</p>
+</div>
+</div>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">This page was built with ❤️ and <a href="https://quarto.org/">Quarto</a> by <a href="https://ariff118.github.io/kamansor.github.io">KA Mansor</a>.</div>   
+  </div>
+</footer>
+
+
+
+</body></html>

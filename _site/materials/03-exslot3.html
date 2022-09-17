@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-0.9.505">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Kamarul Ariffin">
+
+<title>Data Analytics using IBM SPSS Statistics - Data Analysis using IBM SPSS Statistics</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Data Analytics using IBM SPSS Statistics</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html">Home</a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-slides" role="button" data-bs-toggle="dropdown" aria-expanded="false">Slides</a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-slides">    
+        <li>
+    <a class="dropdown-item" href="../materials/01-slot1.html">
+ <span class="dropdown-text">Intro to IBM SPSS Statistics</span></a>
+  </li>  
+        <li class="dropdown-header">Authoring Quarto</li>
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-web-notes" role="button" data-bs-toggle="dropdown" aria-expanded="false">Web Notes</a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-web-notes">    
+        <li>
+    <a class="dropdown-item" href="../materials/02-exslot2.html">
+ <span class="dropdown-text">Slot 2 - Respondents Profiling</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../materials/03-exslot3.html">
+ <span class="dropdown-text">Slot 3 - Test of Differences</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../materials/04-exslot4.html">
+ <span class="dropdown-text">Slot 4 - Establishing Relationships</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://quarto.org/">Quarto Docs</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/ariff118/"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/quarto_pub"><i class="bi bi-twitter" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">Data Analysis using IBM SPSS Statistics</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+    <div class="sidebar-item-container"> 
+        <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Workshop</a>
+      <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+        <i class="bi bi-chevron-right ms-2"></i>
+      </a>
+    </div>
+    <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../materials/01-slot1.html" class="sidebar-item-text sidebar-link">Intro to IBM SPSS Statistics</a>
+  </div>
+</li>
+    </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#test-of-differences" id="toc-test-of-differences" class="nav-link active" data-scroll-target="#test-of-differences">TEST OF DIFFERENCES<br>
+  </a>
+  <ul class="collapse">
+  <li><a href="#a.-test-of-differences-2-means-independent-samples" id="toc-a.-test-of-differences-2-means-independent-samples" class="nav-link" data-scroll-target="#a.-test-of-differences-2-means-independent-samples">a. Test of differences (2 means) Independent Samples<br>
+  </a></li>
+  <li><a href="#b.-test-of-differences-2-means--dependent-samples" id="toc-b.-test-of-differences-2-means--dependent-samples" class="nav-link" data-scroll-target="#b.-test-of-differences-2-means--dependent-samples">b. Test of differences (2 means)- Dependent Samples<br>
+  </a></li>
+  <li><a href="#c.-test-of-differences-2-means---independent-samples-nonparametric" id="toc-c.-test-of-differences-2-means---independent-samples-nonparametric" class="nav-link" data-scroll-target="#c.-test-of-differences-2-means---independent-samples-nonparametric">c.&nbsp;Test of differences (2 means) - Independent Samples Nonparametric<br>
+  </a></li>
+  <li><a href="#d.-test-of-differences-2-means--dependent-samples-nonparametric" id="toc-d.-test-of-differences-2-means--dependent-samples-nonparametric" class="nav-link" data-scroll-target="#d.-test-of-differences-2-means--dependent-samples-nonparametric">d.&nbsp;Test of differences (2 means)- Dependent Samples Nonparametric<br>
+  </a></li>
+  <li><a href="#e.-test-of-differences-2-means---independent-samples" id="toc-e.-test-of-differences-2-means---independent-samples" class="nav-link" data-scroll-target="#e.-test-of-differences-2-means---independent-samples">e. Test of differences (&gt; 2 means) - Independent Samples<br>
+  </a></li>
+  <li><a href="#f.-test-of-differences-2-means---independent-samples-nonparametric" id="toc-f.-test-of-differences-2-means---independent-samples-nonparametric" class="nav-link" data-scroll-target="#f.-test-of-differences-2-means---independent-samples-nonparametric">f.&nbsp;Test of differences (&gt; 2 means) - Independent Samples Nonparametric<br>
+  </a></li>
+  <li><a href="#g.-test-of-differences-2-means---dependent-samples-nonparametric" id="toc-g.-test-of-differences-2-means---dependent-samples-nonparametric" class="nav-link" data-scroll-target="#g.-test-of-differences-2-means---dependent-samples-nonparametric">g. Test of differences (&gt; 2 means) - Dependent Samples Nonparametric<br>
+  </a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">Data Analysis using IBM SPSS Statistics</h1>
+<p class="subtitle lead">Slot 3 Web Notes</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Kamarul Ariffin </p>
+          </div>
+  </div>
+    
+    
+  </div>
+  
+
+</header>
+
+<section id="test-of-differences" class="level2">
+<h2 class="anchored" data-anchor-id="test-of-differences">TEST OF DIFFERENCES<br>
+</h2>
+<p><strong>PURPOSE:</strong><br>
+- To test whether a variable of interest differ significantly across 3 or more sub-groups of the population, or<br>
+- To test whether 2 or more subgroups of the population differ in terms of one or more variable of interest, or<br>
+- To test whether 2 or more variables are rated differently by the population.<br>
+</p>
+<p><strong>WHEN:</strong><br>
+- To establish whether two or more groups are statistically significantly different in terms of a particular variable of interest.<br>
+- To establish whether two or more variables are rated significantly different by the population. This is to establish definite ranking/ordering<br>
+</p>
+<p><strong>TECHNIQUES:</strong><br>
+- Parametric Techniques: t-test; paired t-test, 1-way ANOVA, 2-way ANOVA<br>
+- Non-Parametric Techniques: Mann-Whitney/Wilcoxon rank sum test; Wilcoxon signed rank sum test, Kruskal Wallis; Friedman test<br>
+</p>
+<hr>
+<section id="a.-test-of-differences-2-means-independent-samples" class="level3">
+<h3 class="anchored" data-anchor-id="a.-test-of-differences-2-means-independent-samples">a. Test of differences (2 means) Independent Samples<br>
+</h3>
+<p>An independent samples t-test is undertaken when we want to compare the mean value of some continuous variable across two different groups. For example we would like to test whether intention to share information differs by gender, say you hypothesize that male have higher intention to share compared to females. The Gender variable is nominal (independent) whereas the criterion variable intention to share information is continuous (dependent) so we can use a t-test.<br>
+</p>
+<p><code>Analyze --&gt; Compare Means --&gt; Independent-Samples T Test</code><br>
+</p>
+<p><strong>SPSS Output</strong><br>
+<img src="images/slot3_table6a.png" class="img-fluid"><br>
+</p>
+<p><strong>In Report APA Style</strong><br>
+Table 6<br>
+<em>Differences in the major variables by gender</em><br>
+<img src="images/slot3_table6b.png" class="img-fluid"><br>
+</p>
+<div class="callout-discussion callout callout-style-default no-icon callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Discussion
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>An independent samples t-test was conducted to compare the intention to share scores for males and females. There were significant differences in the scores for males (M=3.90, SD=0.60), and females [M=3.58, SD=0.69; t(190)=2.93, p=0.002]. The magnitude of the differences in the means was moderate (eta squared= 0.05).</p>
+</div>
+</div>
+<p><strong>Effect Size</strong><br>
+Effect size is to test if the statistical differences found is truly sufficient and not by chance. Although sometimes the difference is significant, it may be because of the large sample size where very small differences will be significant. Effect size calculates the strength of the association which indicates the relative magnitude of the differences between means. <code>Tabachnick and Fidell (1996, p. 53)</code> described this as “amount of total variance that is predictable from the knowledge of the levels of the independent variable”<br>
+</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>One common measure of effect size is eta squared. Eta squared represents the proportion of variance of the dependent variable that is explained by the independent variable (<code>Pallant, 2001</code>). To interpret the strength we can follow the guidelines of <code>Cohen (1988)</code> which is as follows:<br>
+ 0.01 = small effect size<br>
+ 0.06 = moderate effect; and<br>
+ 0.14 = large effect size<br>
+</p>
+</div>
+</div>
+<p><strong>Formula:</strong><br>
+<span class="math display">\[
+Eta\ Squared\ =\ \frac{t^2}{t^2\ +\ (N_1\ +\ N_2\ -\ 2)}
+\]</span></p>
+<p><span class="math display">\[
+Eta\ Squared\ =\ \frac{3.12^2}{3.12^2\ +\ (144\ +\ 48\ -\ 2)}\ =\ 0.049
+\]</span></p>
+<p><strong>References</strong><br>
+<code>Cohen, J.W. (1988)</code>. Statistical power analysis for the behavioral sciences, Hillsdale, NJ: Lawrence Erlbaum Associates.<br>
+<code>Pallant, J. (2001)</code>. SPSS Survival Manual: A step by step guide to data analysis using SPSS for Windows (Version 10), NSW, Australia: Allen &amp; Unwin.<br>
+<code>Tabachnick, B.G. &amp; Fidell, L.S. (1996)</code>. Using Multivariate statistics, New York: Harper Collins.<br>
+</p>
+<p><strong>Exercise 5:</strong><br>
+Test whether the there are any non-response bias for the main variables by early and late responses.<br>
+</p>
+<hr>
+</section>
+<section id="b.-test-of-differences-2-means--dependent-samples" class="level3">
+<h3 class="anchored" data-anchor-id="b.-test-of-differences-2-means--dependent-samples">b. Test of differences (2 means)- Dependent Samples<br>
+</h3>
+<p>A paired t-test is undertaken when we want to compare the mean value of two continuous variables rated by the same person. Normally it is done as an experimental design like pre/post. Say you want to compare sales prior to an advertisement campaign and sales after the sales campaign to see how much sales has increased after the sales campaign. In this test the N remains the same whereas for the earlier independent samples t-test, the N becomes divided into 2 categories say male/female.<br>
+</p>
+<p>In our data we have intention to share rated by the respondent and also actual sharing rated by the same respondent as such we can compare to see if the intention and actual sharing differs significantly.<br>
+</p>
+<p><code>Analyze --&gt; Compare Means --&gt; Paired-Samples T Test</code><br>
+</p>
+<p><strong>SPSS Output</strong><br>
+<img src="images/slot3_table7a.png" class="img-fluid"><br>
+</p>
+<p><strong>In Report APA Style</strong><br>
+Table 7<br>
+<em>Paired t-test Result</em><br>
+<img src="images/slot3_table7b.png" class="img-fluid"><br>
+</p>
+<p><strong>Formula:</strong><br>
+</p>
+<p><span class="math display">\[
+Eta\ Squared\ =\ \frac{t^2}{t^2\ +\ N\ -\ 1)}
+\]</span></p>
+<p><span class="math display">\[
+Eta\ Squared\ =\ \frac{(-9.05)^2}{(-9.05)^2\ +\ 30\ -\ 1}\ =\ 0.3
+\]</span></p>
+<div class="callout-discussion callout callout-style-default no-icon callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Discussion
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A paired sample t-test was conducted to evaluate if the intention to share and actual sharing are significantly different. There is a statistical difference in intention to share and actual sharing (M=3.82, SD=0.64), and females [M=4.06, SD=0.58; t(191)=-9.05, p=0.000]. The magnitude of the differences in the means was large (eta squared= 0.30).</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="c.-test-of-differences-2-means---independent-samples-nonparametric" class="level3">
+<h3 class="anchored" data-anchor-id="c.-test-of-differences-2-means---independent-samples-nonparametric">c.&nbsp;Test of differences (2 means) - Independent Samples Nonparametric<br>
+</h3>
+<p>The <code>Mann-Whitney U test</code> is the equivalent test for an independent samples t-test in <strong>nonparametric</strong> testing. It is undertaken when we want to compare the median value of some continuous variable across two different groups. For example we would like to test whether intention to share information differs by gender, say you hypothesize that male have higher intention to share compared to females. The Gender variable is nominal (independent) whereas the criterion variable intention to share information is continuous (dependent) and if we assume that the distribution is not normal or the sample size is small then we can resort to this test. What this test does is to first convert the continuous variable into ranks and then the mean ranks are compared. We lose some data in this process.<br>
+</p>
+<p><code>Analyze --&gt; Nonparametric Test --&gt; 2 Independent Samples</code><br>
+</p>
+<p><strong>SPSS Output</strong><br>
+<img src="images/slot3_tablec.png" class="img-fluid"><br>
+</p>
+<div class="callout-discussion callout callout-style-default no-icon callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Discussion
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>From the output we can conclude that there are statistical significant differences (Z=-3.266, p&lt; 0.01) in terms of intention to share among males and female employees. Males employees have higher intention to share as evidenced by the higher mean rank values.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="d.-test-of-differences-2-means--dependent-samples-nonparametric" class="level3">
+<h3 class="anchored" data-anchor-id="d.-test-of-differences-2-means--dependent-samples-nonparametric">d.&nbsp;Test of differences (2 means)- Dependent Samples Nonparametric<br>
+</h3>
+<p>The <code>Wilcoxon Signed Rank Test</code> is the nonparametric equivalent of the paired t-test is undertaken when we want to compare the median value of two continuous variables rated by the same person. Normally it is done as an experimental design like pre/post. Say you want to compare sales prior to an advertisement campaign and sales after the sales campaign to see how much sales has increased after the sales campaign. In this test the N remains the same whereas for the earlier independent samples t-test, the N becomes divided into 2 categories say male/female.<br>
+</p>
+<p><code>Analyze --&gt; Nonparametric Test --&gt; 2 Related samples</code><br>
+</p>
+<p><img src="images/slot3_tabled1.png" class="img-fluid"><br>
+<img src="images/slot3_tabled2.png" class="img-fluid"><br>
+</p>
+<div class="callout-discussion callout callout-style-default no-icon callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Discussion
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>From the output we can conclude that there are statistical significant differences (Z=-8278, p&lt; 0.01) in terms of intention to share and actual sharing. Intention to share has been rated lower consistently by the respondents as evidenced by the higher positive mean rank values.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="e.-test-of-differences-2-means---independent-samples" class="level3">
+<h3 class="anchored" data-anchor-id="e.-test-of-differences-2-means---independent-samples">e. Test of differences (&gt; 2 means) - Independent Samples<br>
+</h3>
+<p>A one way ANOVA is used when we want to compare a continuous variable across more than 2 groups which are also called the <code>“between-groups”</code> test.<br>
+</p>
+<p><code>Analyze --&gt; Compare Means --&gt; One-Way ANOVA</code><br>
+</p>
+<p><strong>SPSS Output</strong><br>
+<img src="images/slot3_table8a.png" class="img-fluid"><br>
+</p>
+<div class="aside">
+<p>Post Hoc Tests: Homogeneous Subsets</p>
+</div>
+<p><img src="images/slot3_table8b.png" class="img-fluid"><br>
+</p>
+<p><strong>Effect Size</strong><br>
+</p>
+<p><span class="math inline">\(Formula\ =\ \frac{Sum\ of\ Squares\ Between\ Group}{Total\ Sum\ of\ Squares}\)</span><br>
+</p>
+<p><span class="math inline">\(Effect\ Size\ = \frac{3.251}{77.933}\ =\ 0.04\)</span><br>
+</p>
+<p><strong>In Report APA Style</strong><br>
+Table 8<br>
+<em>Differences in the Intention to share by Educational Level</em><br>
+<img src="images/slot3_table8c.png" class="img-fluid"><br>
+</p>
+<div class="callout-discussion callout callout-style-default no-icon callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Discussion
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A one-way between-group ANOVA was conducted to test whether intention to share differed by level of education. There was a statistically significant differences at the p&lt; 0.05 level in intention scores for the 4 educational levels [F(3,188) = 2.728, p=0.045]. Despite reaching statistical significance, the actual difference in mean scores between the groups was quite small. The effect size, calculated using the eta squared, was 0.04. Post-hoc comparison using the Duncan’s range test indicated that the mean score for Masters (M=3.51, SD=0.92) and First degree (M=3.82, SD=0.62) was statistically different from PhD (M=4.40, SD=0.46). Those with Diploma education (M=3.89, SD=0.47) did not differ statistically from the PhD group.</p>
+</div>
+</div>
+<p><strong>Exercises</strong><br>
+</p>
+<blockquote class="blockquote">
+<p>Repeat the same anaysis for <code>Job Position</code> and <code>Age Group</code>.</p>
+</blockquote>
+<hr>
+</section>
+<section id="f.-test-of-differences-2-means---independent-samples-nonparametric" class="level3">
+<h3 class="anchored" data-anchor-id="f.-test-of-differences-2-means---independent-samples-nonparametric">f.&nbsp;Test of differences (&gt; 2 means) - Independent Samples Nonparametric<br>
+</h3>
+<p>The Kruskal-Wallis Test is the nonparametric equivalent test for the one way ANOVA. It allows us to compare the scores on a continuous variable across three or more groups. This is also called a “between groups” analysis.<br>
+</p>
+<p><code>Analyze --&gt; Nonparametric Test --&gt; k Independent Samples</code><br>
+</p>
+<p><strong>SPSS Output</strong><br>
+<img src="images/slot3_table9a.png" class="img-fluid"><br>
+</p>
+<p><strong>In Report APA Style</strong><br>
+Table 9<br>
+<em>Differences in the Intention to share by Educational Level</em><br>
+<img src="images/slot3_table9b.png" class="img-fluid"><br>
+</p>
+<div class="callout-discussion callout callout-style-default no-icon callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Discussion
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>There are no significant differences in the intention to share among employees with different educational background (2=4.543, p&gt; 0.01). This point to the conclusion that employees have the same level of intention to share does not matter what education level they have attained.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="g.-test-of-differences-2-means---dependent-samples-nonparametric" class="level3">
+<h3 class="anchored" data-anchor-id="g.-test-of-differences-2-means---dependent-samples-nonparametric">g. Test of differences (&gt; 2 means) - Dependent Samples Nonparametric<br>
+</h3>
+<p>The Friedman Test is the nonparametric equivalent of the one way repeated measure ANOVA. The idea is to compare say the ratings of several variables by the same respondent to see if there are differences. It is also called repeated measure within subjects test.<br>
+</p>
+<p><code>Analyze --&gt; Nonparametric Test --&gt; k Related Samples</code><br>
+</p>
+<p><strong>SPSS Output</strong><br>
+<img src="images/slot3_table10a.png" class="img-fluid"><br>
+</p>
+<p><strong>In Report APA Style</strong>&nbsp; Table 10<br>
+<em>Friedman Two-Way ANOVA Result</em><br>
+<img src="images/slot3_table10b.png" class="img-fluid"><br>
+</p>
+<div class="callout-discussion callout callout-style-default no-icon callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Discussion
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>There are significant differences in the ratings of the 5 questions by the respondents (<span class="math inline">\(\chi ^2\)</span> = 42.830, p &lt; 0.01). Some of the items are rated much higher as compared to the other items like Reciprocal3 is rated the lowest</p>
+</div>
+</div>
+<p><strong>Test for Concordance</strong><br>
+This is a test to compare if the there is agreement among the respondents in terms of their rating of each of the items. The Kendall’s W value will tell us if there is agreement or not. A higher value closer to 1 indicates there is strong agreement whereas a value closer to 0 indicates that there is no agreement at all.<br>
+</p>
+<p><img src="images/slot3_table10c.png" class="img-fluid"><br>
+</p>
+<div class="callout-discussion callout callout-style-default no-icon callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Discussion
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The analysis shows that there is little agreement among the raters (<span class="math inline">\(\chi ^2\)</span> = 42.830, p &lt; 0.01). This can be inferred from the low value of Kendall’s W which is only 0.056.</p>
+</div>
+</div>
+<p><strong>Exercise 6:</strong><br>
+Test whether the there are differences in terms of intention to share and actual sharing across position and department.<br>
+</p>
+<hr>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">This page was built with ❤️ and <a href="https://quarto.org/">Quarto</a> by <a href="https://ariff118.github.io/kamansor.github.io">KA Mansor</a>.</div>   
+  </div>
+</footer>
+
+
+
+</body></html>

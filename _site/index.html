@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-0.9.505">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Kamarul Ariffin">
+
+<title>Data Analytics using IBM SPSS Statistics</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Data Analytics using IBM SPSS Statistics</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./index.html" aria-current="page">Home</a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-slides" role="button" data-bs-toggle="dropdown" aria-expanded="false">Slides</a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-slides">    
+        <li>
+    <a class="dropdown-item" href="./materials/01-slot1.html">
+ <span class="dropdown-text">Intro to IBM SPSS Statistics</span></a>
+  </li>  
+        <li class="dropdown-header">Authoring Quarto</li>
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-web-notes" role="button" data-bs-toggle="dropdown" aria-expanded="false">Web Notes</a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-web-notes">    
+        <li>
+    <a class="dropdown-item" href="./materials/02-exslot2.html">
+ <span class="dropdown-text">Slot 2 - Respondents Profiling</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./materials/03-exslot3.html">
+ <span class="dropdown-text">Slot 3 - Test of Differences</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./materials/04-exslot4.html">
+ <span class="dropdown-text">Slot 4 - Establishing Relationships</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://quarto.org/">Quarto Docs</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/ariff118/"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/quarto_pub"><i class="bi bi-twitter" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">Data Analytics using IBM SPSS Statistics</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+    <div class="sidebar-item-container"> 
+        <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Workshop</a>
+      <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+        <i class="bi bi-chevron-right ms-2"></i>
+      </a>
+    </div>
+    <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./materials/01-slot1.html" class="sidebar-item-text sidebar-link">Intro to IBM SPSS Statistics</a>
+  </div>
+</li>
+    </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#general-information" id="toc-general-information" class="nav-link active" data-scroll-target="#general-information">General Information</a>
+  <ul class="collapse">
+  <li><a href="#description" id="toc-description" class="nav-link" data-scroll-target="#description">Description</a></li>
+  <li><a href="#expectations-and-goals" id="toc-expectations-and-goals" class="nav-link" data-scroll-target="#expectations-and-goals">Expectations and Goals</a></li>
+  </ul></li>
+  <li><a href="#workshop-materials" id="toc-workshop-materials" class="nav-link" data-scroll-target="#workshop-materials">Workshop Materials</a>
+  <ul class="collapse">
+  <li><a href="#required-materials" id="toc-required-materials" class="nav-link" data-scroll-target="#required-materials">Required Materials</a></li>
+  <li><a href="#optional-materials" id="toc-optional-materials" class="nav-link" data-scroll-target="#optional-materials">Optional Materials</a></li>
+  </ul></li>
+  <li><a href="#required-text" id="toc-required-text" class="nav-link" data-scroll-target="#required-text">Required Text</a></li>
+  <li><a href="#workshop-schedule" id="toc-workshop-schedule" class="nav-link" data-scroll-target="#workshop-schedule">Workshop Schedule</a></li>
+  <li><a href="#instructor" id="toc-instructor" class="nav-link" data-scroll-target="#instructor">Instructor</a></li>
+  <li><a href="#fundamentals-of-data-analysis" id="toc-fundamentals-of-data-analysis" class="nav-link" data-scroll-target="#fundamentals-of-data-analysis">Fundamentals of Data Analysis</a>
+  <ul class="collapse">
+  <li><a href="#descriptive-analysis" id="toc-descriptive-analysis" class="nav-link" data-scroll-target="#descriptive-analysis">1. DESCRIPTIVE ANALYSIS</a></li>
+  <li><a href="#test-of-differences" id="toc-test-of-differences" class="nav-link" data-scroll-target="#test-of-differences">2. TEST OF DIFFERENCES</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">Data Analytics using IBM SPSS Statistics</h1>
+<p class="subtitle lead">From Survey Data into Paper Publications</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Kamarul Ariffin </p>
+          </div>
+  </div>
+    
+    
+  </div>
+  
+
+</header>
+
+<section id="general-information" class="level2">
+<h2 class="anchored" data-anchor-id="general-information">General Information</h2>
+<section id="description" class="level3">
+<h3 class="anchored" data-anchor-id="description">Description</h3>
+<p>This is a full day beginner to intermediate level workshop on how to analyze survey data recorded from a structured questionnaire using IBM SPSS Statistics.</p>
+</section>
+<section id="expectations-and-goals" class="level3">
+<h3 class="anchored" data-anchor-id="expectations-and-goals">Expectations and Goals</h3>
+<p>At the end of the session, participant will be able to know how to handle survey data and prepare the data for further analysis using statistical software IBM SPSS Statistics (any version). In addition, participant will know how to analyze data with respect to specific research questions or objectives, and eventually present the result in proper way in papers or articles for publication purposes.</p>
+</section>
+</section>
+<section id="workshop-materials" class="level2">
+<h2 class="anchored" data-anchor-id="workshop-materials">Workshop Materials</h2>
+<section id="required-materials" class="level3">
+<h3 class="anchored" data-anchor-id="required-materials">Required Materials</h3>
+<ul>
+<li>IBM SPSS Statistics (any version – IBM SPSS Statistics version 26 will be provided if participant don’t have one installed in his or her computer)</li>
+<li>Presentation slides (provided by instructor)</li>
+<li>Data set (provided by instructor or use own data set)</li>
+</ul>
+</section>
+<section id="optional-materials" class="level3">
+<h3 class="anchored" data-anchor-id="optional-materials">Optional Materials</h3>
+<p>Will be provided during the workshop if any.</p>
+</section>
+</section>
+<section id="required-text" class="level2">
+<h2 class="anchored" data-anchor-id="required-text">Required Text</h2>
+<p>Provided by instructor</p>
+</section>
+<section id="workshop-schedule" class="level2">
+<h2 class="anchored" data-anchor-id="workshop-schedule">Workshop Schedule</h2>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Time</th>
+<th style="text-align: left;">Activity</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">08:00 – 08:15</td>
+<td style="text-align: left;">Registration</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">08:15 – 10:15</td>
+<td style="text-align: left;">Slot 1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">10:15 – 10:30</td>
+<td style="text-align: left;">Break</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">10:30 – 12:30</td>
+<td style="text-align: left;">Slot 2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">12:30 – 14:00</td>
+<td style="text-align: left;">Lunch</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">14:00 – 16:00</td>
+<td style="text-align: left;">Slot 3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">16:00 – 16:30</td>
+<td style="text-align: left;">Q&amp;A</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">16:30</td>
+<td style="text-align: left;">Session End</td>
+</tr>
+</tbody>
+</table>
+<table class="table">
+<colgroup>
+<col style="width: 7%">
+<col style="width: 32%">
+<col style="width: 10%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Item</th>
+<th>Topic</th>
+<th style="text-align: center;">Duration</th>
+<th>Exercise</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Slot 1</td>
+<td><p>Pre-works</p>
+<p>- Data preparation</p>
+<p>- Code and recode variables</p>
+<p>- Missing values</p>
+<p>- Normality</p>
+<p>- Compute new variables</p>
+<p>- Outliers</p>
+<p>- etc.</p></td>
+<td style="text-align: center;">2 – 2 ½ hours</td>
+<td>Step by step approach preparing survey data for analysis using IBM SPSS Statistics</td>
+</tr>
+<tr class="even">
+<td>Slot 2</td>
+<td><p><em>Descriptive Statistics</em></p>
+<p>- Categorical data</p>
+<p>- Numerical data</p>
+<p>- Frequency distribution</p>
+<p>- Data visualization</p>
+<p>- Handling of Likert Scale data</p>
+<p><em>Inferential Statistics (Basic)</em></p>
+<p>- t-test</p>
+<p>- one way ANOVA</p>
+<p>- chi-square test of independence</p></td>
+<td style="text-align: center;">2 – 2 ½ hours</td>
+<td><p>How to report demographic profile in papers?</p>
+<p>How to report descriptive analysis in paper?</p>
+<p>Create and edit basic data visualization.</p>
+<p>Analyze and present Likert Scale data</p>
+<p>How to run basic inferential statistics analysis?</p></td>
+</tr>
+<tr class="odd">
+<td>Slot 3</td>
+<td><p>Inferential Statistics (Intermediate)</p>
+<p>- Correlation</p>
+<p>- Regression</p>
+<p>- Moderation &amp; Mediation Analysis (if time permits)</p></td>
+<td style="text-align: center;">2 – 2 ½ hours</td>
+<td><p>Testing hypothesis on relationship between variables.</p>
+<p>How to report in papers for publication purpose (APA 7<sup>th</sup> edition)</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="instructor" class="level2">
+<h2 class="anchored" data-anchor-id="instructor">Instructor</h2>
+<p>Kamarul Ariffin Mansor (M.Sc.) is a senior lecturer at Faculty of Computer Science and Mathematics, Universiti Teknologi MARA (UiTM), Kedah Branch Campus, Malaysia. His research interests include the application of structural equation modelling and statistical applications in other field of studies, data analytics and visualization using <code>IBM SPSS Statistics</code>, <code>Excel</code>, <code>R</code>, <code>Google Data Studio</code>, <code>Tableau</code>, etc.</p>
+<p>Personal websites: <a href="https://ariff118.github.io/kamansor.github.io/" class="uri">https://ariff118.github.io/kamansor.github.io/</a><br>
+CV: <a href="https://ariff118.github.io/kamansor.github.io/files/cv-kamarul.pdf" class="uri">https://ariff118.github.io/kamansor.github.io/files/cv-kamarul.pdf</a></p>
+</section>
+<section id="fundamentals-of-data-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="fundamentals-of-data-analysis">Fundamentals of Data Analysis</h2>
+<p>3 Most Common Basic Analysis in Research</p>
+<section id="descriptive-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="descriptive-analysis">1. DESCRIPTIVE ANALYSIS</h3>
+<p><strong>PURPOSE:</strong></p>
+<ul>
+<li>Describe the distribution of the variable of interest.</li>
+</ul>
+<p><strong>TECHNIQUES:</strong></p>
+<ul>
+<li>Frequencies and Cross-tabulations for Nominal or Categorical Variables</li>
+<li>Means and Means by sub-groups for Continuous Data</li>
+</ul>
+<p><strong>WHEN DO WE USE THEM IN THE RESEARCH?</strong></p>
+<ul>
+<li>Describing the Sample Profile</li>
+<li>Issue of Representativeness - Non-Response Bias</li>
+</ul>
+</section>
+<section id="test-of-differences" class="level3">
+<h3 class="anchored" data-anchor-id="test-of-differences">2. TEST OF DIFFERENCES</h3>
+<p><strong>PURPOSE:</strong></p>
+<ul>
+<li>To test whether a variable of interest differ significantly across 3 or more sub-groups of the population, or</li>
+<li>To test whether 2 or more subgroups of the population differ in terms of one or more variable of interest, or</li>
+<li>To test whether 2 or more variables are rated differently by the population.</li>
+</ul>
+<p><strong>WHEN:</strong></p>
+<ul>
+<li>To establish whether two or more groups are statistically significantly different in terms of a particular variable of interest.</li>
+<li>To establish whether two or more variables are rated significantly different by the population. This is to establish definite ranking/ordering</li>
+</ul>
+<p><strong>TECHNIQUES:</strong></p>
+<ul>
+<li>Parametric Techniques: t-test; paired t-test, 1-way ANOVA, 2-way ANOVA</li>
+<li>Non-Parametric Techniques: Mann-Whitney/ Wilcoxon rank sum test; Wilcoxon signed rank sum test, Kruskal Wallis; Friedman test</li>
+</ul>
+<hr>
+<p><img src="https://i.creativecommons.org/l/by/4.0/88x31.png" class="img-fluid"> This work is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">This page was built with ❤️ and <a href="https://quarto.org/">Quarto</a> by <a href="https://ariff118.github.io/kamansor.github.io">KA Mansor</a>.</div>   
+  </div>
+</footer>
+
+
+
+</body></html>
