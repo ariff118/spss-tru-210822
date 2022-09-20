@@ -25,6 +25,10 @@ format: html
 ### a. Test of differences (2 means) Independent Samples\
 
 An independent samples t-test is undertaken when we want to compare the mean value of some continuous variable across two different groups. For example we would like to test whether intention to share information differs by gender, say you hypothesize that male have higher intention to share compared to females. The Gender variable is nominal (independent) whereas the criterion variable intention to share information is continuous (dependent) so we can use a t-test.\
+
+::: callout-question
+Does intention to share vary by gender?
+:::
         
 `Analyze --> Compare Means --> Independent-Samples T Test`\
 
@@ -75,6 +79,10 @@ A paired t-test is undertaken when we want to compare the mean value of two cont
 
 In our data we have intention to share rated by the respondent and also actual sharing rated by the same respondent as such we can compare to see if the intention and actual sharing differs significantly.\
 
+::: callout-question
+Are there differences between intention to share and actual sharing behavior?
+:::
+
 `Analyze --> Compare Means --> Paired-Samples T Test`\
 
 **SPSS Output**\
@@ -103,6 +111,10 @@ A paired sample t-test was conducted to evaluate if the intention to share and a
 ### c. Test of differences (2 means) - Independent Samples Nonparametric\
 
 The `Mann-Whitney U test` is the equivalent test for an independent samples t-test in **nonparametric** testing. It is undertaken when we want to compare the median value of some continuous variable across two different groups. For example we would like to test whether intention to share information differs by gender, say you hypothesize that male have higher intention to share compared to females. The Gender variable is nominal (independent) whereas the criterion variable intention to share information is continuous (dependent) and if we assume that the distribution is not normal or the sample size is small then we can resort to this test. What this test does is to first convert the continuous variable into ranks and then the mean ranks are compared. We lose some data in this process.\
+
+::: callout-question
+Does the variables vary by gender?
+:::
 
 `Analyze --> Nonparametric Test --> 2 Independent Samples`\
 
@@ -133,6 +145,10 @@ From the output we can conclude that there are statistical significant differenc
 ### e. Test of differences (> 2 means) - Independent Samples\
 
 A one way ANOVA is used when we want to compare a continuous variable across more than 2 groups which are also called the `“between-groups”` test.\
+
+::: callout-question
+Does intention vary by education level?
+:::
 
 `Analyze --> Compare Means --> One-Way ANOVA`\
 
@@ -169,6 +185,10 @@ A one-way between-group ANOVA was conducted to test whether intention to share d
 ### f. Test of differences (> 2 means) - Independent Samples Nonparametric\
 
 The Kruskal-Wallis Test is the nonparametric equivalent test for the one way ANOVA. It allows us to compare the scores on a continuous variable across three or more groups. This is also called a “between groups” analysis.\
+
+::: callout-question
+Does the variables vary by educational background?
+:::
 
 `Analyze --> Nonparametric Test --> k Independent Samples`\
 

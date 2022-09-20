@@ -152,6 +152,39 @@ The fifth assumption is the collinearity problem. This is a problem when the ind
 ![](images/slot4_assump5.png)\
 ![](images/slot4_assump5b.png)\
 
+### 6. Independence of the error term - Autocorrelation\
+
+This is an assumption that is particularly a problem with time series data and not for cross sectional data. We assume that each predicted value is independent, which means that the predicted value is not related to any other prediction; that is, they are not sequenced by any variable such as time. This can be assessed by looking at the Durbin Watson value. If the D-W value is between 1.5 – 2.5 then we can assume there is no problem.\
+
+![](images/slot4_assump6.png)\
+
+**Formula:**\
+$D\ =\ \frac{\sum_{i=2}^n\ (r_i\ -\ r_{i-1})^2}{\sum_{i=1}^n\ r_i^2}$
+
+Durbin-Watson Statistic, D\
+
+- 0 $\le$ D $\le$ 4\
+- D $\approx$ 2 - No autocorrelation\
+- D < 1.5 - 1st order + ve autocorrelation\
+- D > 2.5 - 1st order - ve autocorrelation\
+
+### 7. Outliers\
+
+These are values which are extremely large and influential that they can influence the results of the regression. Usually the threshold is set at  3 standard deviations. Although this is the default some researchers may set a threshold of  2.5 to get better predictive power. This assumption can be easily identified by looking at whether there are casewise diagnostics.\
+
+![](images/slot4_assump7a.png)\
+
+We need to deselect the cases identified and re-run the regression analysis to see the impact to the predictive power after taking out these outliers. If the impact is very minimal then we can conclude that these outliers are not influential.\
+
+![](images/slot4_assump7b.png)\
+
+**Advanced Diagnostics**\
+
+There are several other measures that can be looked at to ascertain influential observations among them the more popular values looked at are Mahanalobis Distance, Cooks value and Leverage values.\
+
+![](images/slot4_assupm8.png)\
+
+
 
 
 

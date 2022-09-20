@@ -8,7 +8,7 @@
 
 <meta name="author" content="Kamarul Ariffin">
 
-<title>Data Analytics using IBM SPSS Statistics - Data Analysis using IBM SPSS Statistics</title>
+<title>Data Analysis using IBM SPSS Statistics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -67,7 +67,7 @@ ul.task-list{list-style: none;}
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">Data Analytics using IBM SPSS Statistics</span>
+    <span class="navbar-title">Data Analysis using IBM SPSS Statistics</span>
   </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
@@ -77,16 +77,6 @@ ul.task-list{list-style: none;}
   <li class="nav-item">
     <a class="nav-link" href="../index.html">Home</a>
   </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-slides" role="button" data-bs-toggle="dropdown" aria-expanded="false">Slides</a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-slides">    
-        <li>
-    <a class="dropdown-item" href="../materials/01-slot1.html">
- <span class="dropdown-text">Intro to IBM SPSS Statistics</span></a>
-  </li>  
-        <li class="dropdown-header">Authoring Quarto</li>
-    </ul>
-  </li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-web-notes" role="button" data-bs-toggle="dropdown" aria-expanded="false">Web Notes</a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-web-notes">    
@@ -149,7 +139,17 @@ ul.task-list{list-style: none;}
     <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../materials/01-slot1.html" class="sidebar-item-text sidebar-link">Intro to IBM SPSS Statistics</a>
+  <a href="../materials/02-exslot2.html" class="sidebar-item-text sidebar-link">Slot 2 - Respondents Profiling</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../materials/03-exslot3.html" class="sidebar-item-text sidebar-link">Slot 3 - Test of Differences</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../materials/04-exslot4.html" class="sidebar-item-text sidebar-link active">Slot 4 - Establishing Relationships</a>
   </div>
 </li>
     </ul>
@@ -182,6 +182,10 @@ ul.task-list{list-style: none;}
   <li><a href="#constant-variance-homoscedasticity" id="toc-constant-variance-homoscedasticity" class="nav-link" data-scroll-target="#constant-variance-homoscedasticity">4. Constant Variance – Homoscedasticity<br>
   </a></li>
   <li><a href="#multicollinearity" id="toc-multicollinearity" class="nav-link" data-scroll-target="#multicollinearity">5. Multicollinearity<br>
+  </a></li>
+  <li><a href="#independence-of-the-error-term---autocorrelation" id="toc-independence-of-the-error-term---autocorrelation" class="nav-link" data-scroll-target="#independence-of-the-error-term---autocorrelation">6. Independence of the error term - Autocorrelation<br>
+  </a></li>
+  <li><a href="#outliers" id="toc-outliers" class="nav-link" data-scroll-target="#outliers">7. Outliers<br>
   </a></li>
   </ul></li>
   </ul></li>
@@ -428,6 +432,46 @@ Run several simple linear regression using expected rewards, reciprocal relation
 </p>
 <p><img src="images/slot4_assump5.png" class="img-fluid"><br>
 <img src="images/slot4_assump5b.png" class="img-fluid"><br>
+</p>
+</section>
+<section id="independence-of-the-error-term---autocorrelation" class="level3">
+<h3 class="anchored" data-anchor-id="independence-of-the-error-term---autocorrelation">6. Independence of the error term - Autocorrelation<br>
+</h3>
+<p>This is an assumption that is particularly a problem with time series data and not for cross sectional data. We assume that each predicted value is independent, which means that the predicted value is not related to any other prediction; that is, they are not sequenced by any variable such as time. This can be assessed by looking at the Durbin Watson value. If the D-W value is between 1.5 – 2.5 then we can assume there is no problem.<br>
+</p>
+<p><img src="images/slot4_assump6.png" class="img-fluid"><br>
+</p>
+<p><strong>Formula:</strong><br>
+<span class="math inline">\(D\ =\ \frac{\sum_{i=2}^n\ (r_i\ -\ r_{i-1})^2}{\sum_{i=1}^n\ r_i^2}\)</span></p>
+<p>Durbin-Watson Statistic, D<br>
+</p>
+<ul>
+<li>0 <span class="math inline">\(\le\)</span> D <span class="math inline">\(\le\)</span> 4<br>
+</li>
+<li>D <span class="math inline">\(\approx\)</span> 2 - No autocorrelation<br>
+</li>
+<li>D &lt; 1.5 - 1st order + ve autocorrelation<br>
+</li>
+<li>D &gt; 2.5 - 1st order - ve autocorrelation<br>
+</li>
+</ul>
+</section>
+<section id="outliers" class="level3">
+<h3 class="anchored" data-anchor-id="outliers">7. Outliers<br>
+</h3>
+<p>These are values which are extremely large and influential that they can influence the results of the regression. Usually the threshold is set at  3 standard deviations. Although this is the default some researchers may set a threshold of  2.5 to get better predictive power. This assumption can be easily identified by looking at whether there are casewise diagnostics.<br>
+</p>
+<p><img src="images/slot4_assump7a.png" class="img-fluid"><br>
+</p>
+<p>We need to deselect the cases identified and re-run the regression analysis to see the impact to the predictive power after taking out these outliers. If the impact is very minimal then we can conclude that these outliers are not influential.<br>
+</p>
+<p><img src="images/slot4_assump7b.png" class="img-fluid"><br>
+</p>
+<p><strong>Advanced Diagnostics</strong><br>
+</p>
+<p>There are several other measures that can be looked at to ascertain influential observations among them the more popular values looked at are Mahanalobis Distance, Cooks value and Leverage values.<br>
+</p>
+<p><img src="images/slot4_assupm8.png" class="img-fluid"><br>
 </p>
 
 

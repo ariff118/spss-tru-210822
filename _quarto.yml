@@ -5,7 +5,7 @@ project:
     - "!materials/workshop/"
 
 website:
-  title: "Data Analytics using IBM SPSS Statistics"
+  title: "Data Analysis using IBM SPSS Statistics"
   page-footer:
     left: "This page was built with ❤️ and [Quarto](https://quarto.org/) by [KA Mansor](https://ariff118.github.io/kamansor.github.io)."
   navbar:
@@ -13,11 +13,6 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - text: Slides
-        menu: 
-          - href: materials/01-slot1.qmd
-            text: "Intro to IBM SPSS Statistics"
-          - text: "Authoring Quarto"
       - text: Web Notes
         menu: 
           - href: materials/02-exslot2.qmd
@@ -38,9 +33,12 @@ website:
     contents: 
       - section: "Workshop"
         contents: 
-          - href: materials/01-slot1.qmd
-            text: "Intro to IBM SPSS Statistics"
-          - text: "Authoring Quarto"
+          - href: materials/02-exslot2.qmd
+            text: "Slot 2 - Respondents Profiling"
+          - href: materials/03-exslot3.qmd
+            text: "Slot 3 - Test of Differences"
+          - href: materials/04-exslot4.qmd
+            text: "Slot 4 - Establishing Relationships"
 
 format:
   html:

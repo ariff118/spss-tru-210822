@@ -8,7 +8,7 @@
 
 <meta name="author" content="Kamarul Ariffin">
 
-<title>Data Analytics using IBM SPSS Statistics - Data Analysis using IBM SPSS Statistics</title>
+<title>Data Analysis using IBM SPSS Statistics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -67,7 +67,7 @@ ul.task-list{list-style: none;}
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">Data Analytics using IBM SPSS Statistics</span>
+    <span class="navbar-title">Data Analysis using IBM SPSS Statistics</span>
   </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
@@ -77,16 +77,6 @@ ul.task-list{list-style: none;}
   <li class="nav-item">
     <a class="nav-link" href="../index.html">Home</a>
   </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-slides" role="button" data-bs-toggle="dropdown" aria-expanded="false">Slides</a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-slides">    
-        <li>
-    <a class="dropdown-item" href="../materials/01-slot1.html">
- <span class="dropdown-text">Intro to IBM SPSS Statistics</span></a>
-  </li>  
-        <li class="dropdown-header">Authoring Quarto</li>
-    </ul>
-  </li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-web-notes" role="button" data-bs-toggle="dropdown" aria-expanded="false">Web Notes</a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-web-notes">    
@@ -149,7 +139,17 @@ ul.task-list{list-style: none;}
     <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../materials/01-slot1.html" class="sidebar-item-text sidebar-link">Intro to IBM SPSS Statistics</a>
+  <a href="../materials/02-exslot2.html" class="sidebar-item-text sidebar-link">Slot 2 - Respondents Profiling</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../materials/03-exslot3.html" class="sidebar-item-text sidebar-link active">Slot 3 - Test of Differences</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../materials/04-exslot4.html" class="sidebar-item-text sidebar-link">Slot 4 - Establishing Relationships</a>
   </div>
 </li>
     </ul>
@@ -232,6 +232,19 @@ ul.task-list{list-style: none;}
 </h3>
 <p>An independent samples t-test is undertaken when we want to compare the mean value of some continuous variable across two different groups. For example we would like to test whether intention to share information differs by gender, say you hypothesize that male have higher intention to share compared to females. The Gender variable is nominal (independent) whereas the criterion variable intention to share information is continuous (dependent) so we can use a t-test.<br>
 </p>
+<div class="callout-question callout callout-style-default no-icon callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Question
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Does intention to share vary by gender?</p>
+</div>
+</div>
 <p><code>Analyze --&gt; Compare Means --&gt; Independent-Samples T Test</code><br>
 </p>
 <p><strong>SPSS Output</strong><br>
@@ -299,6 +312,19 @@ Test whether the there are any non-response bias for the main variables by early
 </p>
 <p>In our data we have intention to share rated by the respondent and also actual sharing rated by the same respondent as such we can compare to see if the intention and actual sharing differs significantly.<br>
 </p>
+<div class="callout-question callout callout-style-default no-icon callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Question
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Are there differences between intention to share and actual sharing behavior?</p>
+</div>
+</div>
 <p><code>Analyze --&gt; Compare Means --&gt; Paired-Samples T Test</code><br>
 </p>
 <p><strong>SPSS Output</strong><br>
@@ -337,6 +363,19 @@ Discussion
 </h3>
 <p>The <code>Mann-Whitney U test</code> is the equivalent test for an independent samples t-test in <strong>nonparametric</strong> testing. It is undertaken when we want to compare the median value of some continuous variable across two different groups. For example we would like to test whether intention to share information differs by gender, say you hypothesize that male have higher intention to share compared to females. The Gender variable is nominal (independent) whereas the criterion variable intention to share information is continuous (dependent) and if we assume that the distribution is not normal or the sample size is small then we can resort to this test. What this test does is to first convert the continuous variable into ranks and then the mean ranks are compared. We lose some data in this process.<br>
 </p>
+<div class="callout-question callout callout-style-default no-icon callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Question
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Does the variables vary by gender?</p>
+</div>
+</div>
 <p><code>Analyze --&gt; Nonparametric Test --&gt; 2 Independent Samples</code><br>
 </p>
 <p><strong>SPSS Output</strong><br>
@@ -387,6 +426,19 @@ Discussion
 </h3>
 <p>A one way ANOVA is used when we want to compare a continuous variable across more than 2 groups which are also called the <code>“between-groups”</code> test.<br>
 </p>
+<div class="callout-question callout callout-style-default no-icon callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Question
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Does intention vary by education level?</p>
+</div>
+</div>
 <p><code>Analyze --&gt; Compare Means --&gt; One-Way ANOVA</code><br>
 </p>
 <p><strong>SPSS Output</strong><br>
@@ -433,6 +485,19 @@ Discussion
 </h3>
 <p>The Kruskal-Wallis Test is the nonparametric equivalent test for the one way ANOVA. It allows us to compare the scores on a continuous variable across three or more groups. This is also called a “between groups” analysis.<br>
 </p>
+<div class="callout-question callout callout-style-default no-icon callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Question
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Does the variables vary by educational background?</p>
+</div>
+</div>
 <p><code>Analyze --&gt; Nonparametric Test --&gt; k Independent Samples</code><br>
 </p>
 <p><strong>SPSS Output</strong><br>
