@@ -170,6 +170,10 @@ To use the test for independence we will ask for the descriptive analysis and th
 
 `Analyze --> Descriptive Statistics --> Crosstabs`\
 
+::: callout-questions
+Do the level of intention to share is independent of gender?\
+:::
+
 **SPSS Output**\
 ![](images/slot1_table5a.png)\
 
