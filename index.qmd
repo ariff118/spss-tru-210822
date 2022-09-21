@@ -135,7 +135,25 @@ CV: <https://ariff118.github.io/kamansor.github.io/files/cv-kamarul.pdf>
 **TECHNIQUES:**
 
 - Parametric Techniques: t-test; paired t-test, 1-way ANOVA, 2-way ANOVA
-- Non-Parametric Techniques: Mann-Whitney/ Wilcoxon rank sum test; Wilcoxon signed rank sum test, Kruskal Wallis; Friedman test
+- Non-Parametric Techniques: Mann-Whitney/ Wilcoxon rank sum test; Wilcoxon signed rank sum test, Kruskal Wallis; Friedman test  
+
+### 3. ESTABLISHING RELATIONSHIPS\
+
+**PURPOSE:**\
+
+- To establish dependence (cause-effect) relationships between two or more variables\
+- To establish the inter-relationships between two or more variables.\
+
+**TECHNIQUES:**\
+
+- Dependence Relationships\
+  - Correlation\
+  - Multiple Regression\
+  - Discriminant Analysis\
+  
+- Non-dependence Relationships\
+  - Correlation – Canonical Correlations\
+  - Factor Analysis\
 
 ------------------------------------------------------------------------
 
